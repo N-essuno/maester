@@ -18,3 +18,4 @@ blobfile
 sentencepiece
 pydantic
 tensorboard
+pydantic-settings>=2.6.0
