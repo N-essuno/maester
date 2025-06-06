@@ -1,4 +1,12 @@
+# ROCm-specific packages
 torch>=2.6 -f https://download.pytorch.org/whl/nightly/rocm6.3
+triton -f https://download.pytorch.org/whl/nightly/rocm6.3
+cut-cross-entropy @ git+https://github.com/apple/ml-cross-entropy.git
+torchvision -f https://download.pytorch.org/whl/nightly/rocm6.3
+torchdata -f https://download.pytorch.org/whl/nightly/rocm6.3
+pytorch-triton-rocm -f https://download.pytorch.org/whl/nightly/rocm6.3
+
+# General libraries (not related to ROCm/CUDA)
 transformers>=4.47.1
 datasets>=2.16.0
 numpy<2
@@ -10,8 +18,3 @@ blobfile
 sentencepiece
 pydantic
 tensorboard
-triton -f https://download.pytorch.org/whl/nightly/rocm6.3
-cut-cross-entropy @ git+https://github.com/apple/ml-cross-entropy.git
-torchvision -f https://download.pytorch.org/whl/nightly/rocm6.3
-torchdata -f https://download.pytorch.org/whl/nightly/rocm6.3
-pytorch-triton-rocm -f https://download.pytorch.org/whl/nightly/rocm6.3
