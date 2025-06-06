@@ -1,6 +1,6 @@
 import subprocess
 from maester.config import Config
-from maester.models import models_config
+# from maester.models import models_config
 from pathlib import Path
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -110,9 +110,9 @@ def main():
 
     # Print for validation
     print(cfg.model_dump_json(indent=2))
-    answer = input("\nValidate configuration? (y/N): ")
-    if answer.lower() != "y":
-        return 1
+    # answer = input("\nValidate configuration? (y/N): ")
+    # if answer.lower() != "y":
+    #     return 1
     
     # Validate
     errors = validate_config(cfg)
@@ -134,10 +134,10 @@ def main():
     print(f"Parallelism: DP={cfg.data_parallel_shard_degree}x{cfg.data_parallel_replicate_degree}, TP={cfg.tensor_parallel_degree}")
     print(f"Batch size: {cfg.train_batch_size} per GPU")
     
-    if not (dry_run := cfg.dry_run):
-        answer = input("\nSubmit job? (y/N): ")
-        if answer.lower() != "y":
-            return 0
+    # if not (dry_run := cfg.dry_run):
+    #     answer = input("\nSubmit job? (y/N): ")
+    #     if answer.lower() != "y":
+    #         return 0
         
     config_dict = cfg.model_dump()
     # Remove submit-only fields
@@ -151,13 +151,13 @@ def main():
     print(f"\nPrepared job directory: {job_dir}")
     
     # Submit
-    try:
-        job_id = submit_job(job_dir, dry_run=dry_run)
-        if job_id:
-            print(f"Submitted job {job_id}")
-    except Exception as e:
-        print(f"Failed to submit job: {e}")
-        return 1
+    # try:
+    #     job_id = submit_job(job_dir, dry_run=dry_run)
+    #     if job_id:
+    #         print(f"Submitted job {job_id}")
+    # except Exception as e:
+    #     print(f"Failed to submit job: {e}")
+    #     return 1
         
     return 0
 

@@ -14,8 +14,6 @@
 #SBATCH --output={dump_dir}/{job_name}/logs/%j.out
 #SBATCH --error={dump_dir}/{job_name}/logs/%j.err
 
-echo "blabla"
-
 # if run without sbatch, invoke here
 if [ -z $SLURM_JOB_ID ]; then
     mkdir -p {dump_dir}/{job_name}/logs
