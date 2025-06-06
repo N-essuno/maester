@@ -11,7 +11,7 @@ sentencepiece
 pydantic
 tensorboard
 triton -f https://download.pytorch.org/whl/nightly/rocm6.3
-cut-cross-entropy -e git+https://github.com/apple/ml-cross-entropy.git
+cut-cross-entropy @ git+https://github.com/apple/ml-cross-entropy.git
 torchvision -f https://download.pytorch.org/whl/nightly/rocm6.3
 torchdata -f https://download.pytorch.org/whl/nightly/rocm6.3
 pytorch-triton-rocm -f https://download.pytorch.org/whl/nightly/rocm6.3
