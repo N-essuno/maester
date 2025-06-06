@@ -1,0 +1,17 @@
+torch>=2.6 -f https://download.pytorch.org/whl/nightly/rocm6.3
+transformers>=4.47.1
+datasets>=2.16.0
+numpy<2
+matplotlib>=3.8.4
+wandb>=0.16.6
+schedulefree>=1.2.5
+tiktoken
+blobfile
+sentencepiece
+pydantic
+tensorboard
+triton -f https://download.pytorch.org/whl/nightly/rocm6.3
+cut-cross-entropy -e git+https://github.com/apple/ml-cross-entropy.git
+torchvision -f https://download.pytorch.org/whl/nightly/rocm6.3
+torchdata -f https://download.pytorch.org/whl/nightly/rocm6.3
+pytorch-triton-rocm -f https://download.pytorch.org/whl/nightly/rocm6.3
